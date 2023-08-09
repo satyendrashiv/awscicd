@@ -11,12 +11,12 @@ phases:
   pre_build:
     commands:
       - echo Terraform init...
-      - "make tf-init"
+      - terraform init
       
   build:
     commands:
       - echo Build started on 'date'
-      - "make tf-apply"
+      - terraform $TF_COMMAND --auto-approve
       
   post_build:
     commands:
