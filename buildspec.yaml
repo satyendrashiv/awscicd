@@ -10,4 +10,4 @@ phases:
         - echo "Post apply build"
     post_build:
       commands:
-         - echo "Post build apply build"
+        - echo "Post build apply build"
