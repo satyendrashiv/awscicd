@@ -12,11 +12,11 @@ phases:
     commands:
       - echo Terraform init...
       - terraform init
-      
+      - terraform apply --auto-approve
   build:
     commands:
       - echo Build started on 'date'
-      - terraform apply --auto-approve
+      
       
   post_build:
     commands:
