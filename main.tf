@@ -1,8 +1,6 @@
 provider "aws" {
   # Configuration options
-  access_key = ""
-  secret_key = "" 
-  region     = "ap-south-1"
+  region = "ap-south-1"
 }
 resource "aws_instance" "web_tf" {
   ami           = "ami-0ded8326293d3201b"
