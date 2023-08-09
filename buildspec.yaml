@@ -10,13 +10,16 @@ phases:
       - sudo mv terraform /usr/local/bin    
   pre_build:
     commands:
-      - echo Installing source NPM dependencies...
+      - echo Terraform init...
+      - terraform init
       
   build:
     commands:
       - echo Build started on 'date'
+      - terraform $TF_COMMAND --auto-approve
       
   post_build:
     commands:
-      - echo Build completed on 'date'
+      - echo terraform $TF_COMMAND completed on 'date'
+     
 
